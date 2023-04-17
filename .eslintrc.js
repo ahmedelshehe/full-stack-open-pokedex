@@ -4,7 +4,7 @@ module.exports = {
     "es6": true,
     "jest/globals": true
   },
-  "extends": [
+    "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
   ],
@@ -23,6 +23,10 @@ module.exports = {
       "error",
         2
       ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
     "quotes": [
       "error",
       "single"
