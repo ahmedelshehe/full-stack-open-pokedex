@@ -9,6 +9,9 @@ app.use(express.static('dist'))
 app.get('/health', (req, res) => {
   res.send('ok')
 })
+app.get('/new_feature', (req, res) => {
+  res.send('ok')
+})
 
 app.get('/version', (req, res) => {
   res.send('3') // change this string to ensure a new version deployed
