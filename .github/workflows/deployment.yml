@@ -18,12 +18,12 @@ jobs:
 
       - name: Check style
         run: npm run eslint
+      - name: Building
+        run: npm build
       - name: Testing 
         run: npm run test
-
-      - name: Cypress run
+      - name: E2E test
         uses: cypress-io/github-action@v5
         with:
-          build: npm run build
-          start: npm start
+          start: npm run start-prod
           browser: chrome
