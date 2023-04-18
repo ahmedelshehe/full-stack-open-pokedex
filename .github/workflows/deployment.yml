@@ -15,15 +15,15 @@ jobs:
           node-version: '16'
       - name: Install dependencies
         run: npm install
-        
+
       - name: Check style
         run: npm run eslint
       - name: Testing 
         run: npm run test
 
-      - name: E2E tests
-        uses: cypress-io/github-action@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
         with:
-          command: npm run test:e2e
-          start: npm run start-prod
-          wait-on: http://localhost:5000
+          build: npm run build
+          start: npm start
+          browser: chrome
