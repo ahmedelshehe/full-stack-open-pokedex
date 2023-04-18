@@ -29,6 +29,5 @@ jobs:
         with:
           start: npm run start-prod
           browser: chrome
-      if: ${{ github.event_name == 'push' }}
       - name: Trigger deployment
         run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}helthchew
