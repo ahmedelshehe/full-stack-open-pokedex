@@ -48,16 +48,16 @@ jobs:
             details: New Version Pushed!
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Notify Discord Failure
-          uses: rjstone/discord-webhook-notify@v1
-          if: failure()
-          with:
-              severity: error
-              details: Test Failed!
-              webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+            severity: error
+            details: Test Failed!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Notify Discord Cancelled
-          uses: rjstone/discord-webhook-notify@v1
-          if: cancelled()
-          with:
-              severity: warn
-              details: Test Cancelled!
-              webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}    
+        uses: rjstone/discord-webhook-notify@v1
+        if: cancelled()
+        with:
+            severity: warn
+            details: Test Cancelled!
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}    
